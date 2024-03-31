@@ -68,13 +68,7 @@ public class SignUpFragment extends Fragment {
         });
 
         loginRedirectText.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Navigate to LoginActivity
-//                // You can use FragmentManager to navigate to another fragment or start a new activity
-//                startActivity(new Intent(requireContext(), MainActivity.class));
-//                requireActivity().finish(); // Finish SignUpActivity if necessary
-//            }
+
             @Override
             public void onClick(View v) {
                 // Navigate to SignUpFragment
