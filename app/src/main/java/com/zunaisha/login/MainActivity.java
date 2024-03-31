@@ -11,13 +11,15 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-Button firstFramgment , secondFragment;
+Button firstFramgment , secondFragment , signupFragment , loginFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         firstFramgment = findViewById(R.id.firstFragment);
         secondFragment = findViewById(R.id.secondFragment);
+        signupFragment = findViewById(R.id.signupFragment);
+        loginFragment = findViewById(R.id.loginFragment);
         firstFramgment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,6 +40,23 @@ Button firstFramgment , secondFragment;
                 loadFragment(secondFragment);
             }
         });
+        signupFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SignUpFragment signupFragment=new SignUpFragment();
+
+                loadFragment(signupFragment);
+            }
+        });
+        loginFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginFragment loginFragment=new LoginFragment();
+
+                loadFragment(loginFragment);
+            }
+        });
+
     }
     public void loadFragment(Fragment fragment){
         FragmentManager fragmentManager=getSupportFragmentManager();
