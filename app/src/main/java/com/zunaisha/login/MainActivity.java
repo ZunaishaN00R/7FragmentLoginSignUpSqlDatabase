@@ -11,13 +11,15 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-Button firstFramgment , secondFragment , signupFragment , loginFragment;
+Button firstFramgment , secondFragment ,thirdFragment ,fourthFragment , signupFragment , loginFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         firstFramgment = findViewById(R.id.firstFragment);
         secondFragment = findViewById(R.id.secondFragment);
+        thirdFragment = findViewById(R.id.thirdFragment);
+        fourthFragment = findViewById(R.id.fourthFragment);
         signupFragment = findViewById(R.id.signupFragment);
         loginFragment = findViewById(R.id.loginFragment);
         firstFramgment.setOnClickListener(new View.OnClickListener() {
@@ -40,11 +42,24 @@ Button firstFramgment , secondFragment , signupFragment , loginFragment;
                 loadFragment(secondFragment);
             }
         });
+        thirdFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ThirdFragment thirdFragment=new ThirdFragment();
+                loadFragment(thirdFragment);
+            }
+        });
+        fourthFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FourthFragment fourthFragment=new FourthFragment();
+                loadFragment(fourthFragment);
+            }
+        });
         signupFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SignUpFragment signupFragment=new SignUpFragment();
-
                 loadFragment(signupFragment);
             }
         });
@@ -52,7 +67,6 @@ Button firstFramgment , secondFragment , signupFragment , loginFragment;
             @Override
             public void onClick(View v) {
                 LoginFragment loginFragment=new LoginFragment();
-
                 loadFragment(loginFragment);
             }
         });

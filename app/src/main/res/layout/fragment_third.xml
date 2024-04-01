@@ -1,24 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img"
     tools:context=".ThirdFragment">
-
-    <TextView
-        android:id="@+id/thirdButton"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Zunaisha Noor Biet-f21-049"
-        android:textSize="28sp"
-        android:textColor="@color/black"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:padding="20dp"
-        android:layout_margin="16dp"
-        android:textStyle="bold"
-        android:elevation="4dp"
-        />
-
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Services"
+            android:textSize="34sp"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/login_email"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:textSize="22dp"
+                android:text="Python Projects"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:textSize="22dp"
+                android:text="Django Rest Framework"
+                android:padding="8dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:textSize="22dp"
+                android:text="CPP Project"
+                android:padding="8dp"
+                android:textStyle="bold" />
+            <Button
+                android:layout_width="350dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="30dp"
+                android:text="Get any Service"
+                android:textSize="18sp"
+                app:cornerRadius="30dp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </LinearLayout>
 </FrameLayout>
